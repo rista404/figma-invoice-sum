@@ -1,0 +1,10 @@
+<script>
+  function doTheMagic() {
+    parent.postMessage({ pluginMessage: { type: "do-the-magic" } }, "*");
+  }
+</script>
+
+<div>
+  <h1>Hello</h1>
+  <button onclick="doTheMagic()">Do the magic</button>
+</div>

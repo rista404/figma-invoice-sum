@@ -1,4 +1,10 @@
+figma.showUI(__html__);
+
 figma.skipInvisibleInstanceChildren = true;
+
+figma.ui.onmessage = (message) => {
+  console.log("got this from the UI", message);
+};
 
 function format(num: number) {
   var numParts = num.toString().split(".");
@@ -169,5 +175,5 @@ function listen() {
 }
 
 run().then(() => {
-  figma.closePlugin();
+  //   figma.closePlugin();
 });
